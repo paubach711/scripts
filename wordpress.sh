@@ -1,4 +1,5 @@
 # instalar paquetes necesarios
+sudo su
 apt update
 apt install apache2 unzip php mysql-server php-mysql ssl-cert -y  
 
