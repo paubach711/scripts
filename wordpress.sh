@@ -20,3 +20,5 @@ make-ssl-cert generate-default-snakeoil --force-overwrite
 a2enmod ssl
 sed -i 's/<VirtualHost \*:80>/<VirtualHost \*:443>\n\tSSLEngine On\n\tSSLCertificateFile \/etc\/ssl\/certs\/ssl-cert-snakeoil.pem\n\tSSLCertificateKeyFile \/etc\/ssl\/private\/ssl-cert-snakeoil.key/' /etc/apache2/sites-enabled/000-default.conf
 systemctl restart apache2
+exit
+echo -e "Servidor escuchando en \e[93mhttp://$IP\e[0m"
